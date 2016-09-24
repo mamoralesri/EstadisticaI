@@ -1,0 +1,1162 @@
+\chapter{Estadística descriptiva}
+
+\section[Objeto de estudio]{Qué estudia la estadística?}
+
+
+{\bf Según Montgomery.} Tiene que ver con la recopilación, presentación, anális
+y uso de datos para tomar decisiones y resolver problemas. Como los cientificos
+e ingenieros analizan datos de manera rutinaria, el conocimiento de la
+estadística tiene una importacia especial en estos campos. La estadística ayuda
+a los ingenieros y científicos a:
+
+\begin{itemize}
+\item Diseñar nuevos productos y sistemas.
+\item Perfeccionar los existentes.
+\item Diseñar, desarrollar y mejorar procesos de producción.
+\item Aumentar la calidad de los productos
+\end{itemize}
+
+La estadística surge de la necesidad de describir y comprender la {\bf
+variabilidad }, la cual es el el resultado de cambios en las condiciones bajo
+las cuales se hacen las observaciones, por ejemplo: diferencias en las
+propiedades de los materiales, en la forma que trabajan los obreros, en
+variables del proceso como temperatura, presión, tiempo, factores ambientales
+como humedad. La variabilidad tambien se presenta por los sistemas de medición
+utilizados y debido al esquema de muestreo.
+
+
+
+
+
+{\bf Aproximación a una definición.} La estadística trata del
+diseño de experimentos o encuestas mediante muestras, para obtener
+una cantidad determinada de información a un costo mínimo, y del
+uso de esta información para hacer inferencias con respecto a una
+población.
+
+{\bf Otra posible definición:} Ciencia que crea, desarrolla y
+aplica técnicas de modo que pueda evaluarse la incertidumbre de
+inferencias inductivas.
+
+La estadística ayuda al investigador a contestar preguntas como:
+\begin{itemize}
+\item ¿Qué técnicas uso para recolectar datos?
+\item ¿Cómo registro y presento mis datos?
+\item ¿Qué modelos uso para analizar mis datos?
+\item ¿Cómo pruebo determinada hipótesis?
+\item ¿Cómo diseño un experimento de tal forma que los datos
+obtenidos sean susceptibles de analizar con métodos estadísticos?
+\end{itemize}
+\section{Escalas de medición}
+Medir es asignar números o atributos a individuos o cosas de
+acuerdo con reglas previamente establecidas. Existen básicamente
+cuatro escalas de medidas: nominal, ordinal, intervalo y razón.
+
+\subsection{Escala Nominal} Es el nivel más bajo de medición y se utiliza
+para clasificar, etiquetar o nominar a los individuos u objetos
+por medio de atributos que pueden ser nombres o números. Cuando se
+asignan números estos {\bf no} son susceptibles de operaciones
+matemáticas puesto que el objetivo es mostrar un código que
+indique diferencias. Esta escala establece una relación
+equivalencias entre objetos o individuos con igual característica.
+
+\begin{ejemplo} 
+\begin{enumerate}[a.]
+\item El carácter de sexo puede clasificarse en hembras y varones y
+puede asignarse el número uno (1) para hembras y el (2) para
+varones.
+\item El estado civil, en el cual los individuos pueden clasificarse
+en solteros, casados, viudos y separados; también puede asignarse
+a los cuatro estados los números 1, 2, 3 y 4.
+\end{enumerate}
+\end{ejemplo}
+En esta escala se pueden hacer algunas operaciones estadísticas
+como sacar frecuencias, porcentajes, modas, y también aplicar
+algunas pruebas de hipótesis como la chi cuadrado $(\chi^2)$ en el
+caso de tablas de contingencia.
+
+\subsection{Escala Ordinal} En esta escala se asignan números,
+que además de establecer relación de equivalencia, poseen una
+relación de orden (menor que o mayor que) de manera que se asignan
+números más grandes a los elementos que posean más de la
+característica estudiada. Estos números no son susceptibles de
+operaciones matemáticas ya que solo permiten diferenciación y el
+ordenamiento de las categorías de la variable.
+
+\begin{ejemplo}
+
+\begin{enumerate}[a.]
+\item El nivel económico de las personas puede medirse con los
+atributos alto, medio, bajo y pobre con los números 4, 3, 2, y 1
+de tal forma que se puede establecer la relación de orden
+$4>3>2>1$.
+\item El escalafón de los docentes universitarios, los cuales poseen
+las categorías auxiliar, asistente, asociado y titular, también
+podrían señalarse con los números 1, 2, 3, 4 respectivamente o
+también usar los números 2, 4, 6 y  8 sin que pierda sentido
+o calidad la clasificación.
+\end{enumerate}
+\end{ejemplo}
+Para analizar este tipo de datos la medida estadística de
+tendencia central más apropiada es la mediana (sección \ref{sec:mediana}), y se
+pueden aplicar
+todos los métodos estadísticos no paramétricos.
+
+\subsection{Escala de Intervalo} La escala de intervalo utiliza números que
+además de clasificar y ordenar agrega la posibilidad de
+interpretar la diferencia entre dos medidas, mediante el
+ordenamiento de intervalos iguales. En esta escala es arbitraria
+tanto la unidad de medida como el punto cero da la escala. Su
+propiedad más importante es que distancias numéricamente iguales
+representan distancias empíricamente iguales (lo cual no
+necesariamente ocurre en la escala ordinal, donde interesa el
+orden más que la distancia).
+
+\begin{ejemplo} La temperatura en grados centígrados es un ejemplo
+típico de la escala de intervalo. La relación que podemos
+establecer entre dos intervalos es independiente de la unidad de
+medida usada y del punto cero (o sea, la unidad de medida y el
+cero son arbitrarios). Esto se advierte bien cuando comparamos dos
+escalas distintas de temperatura (Fahrenheit y Celsius), pudiendo
+transformarse una en otra mediante fórmulas de conversión a pesar
+de tener distintas unidades de medida y distinta ubicación del
+punto cero. Por lo tanto la relación de las diferencias en una de
+las escalas es igual a la relación de las diferencias equivalentes
+en la otra escala:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Celsius &0 & 10& 30&100 \\\hline
+Fahrenheit & 32 &50 & 86 &112 \\ \hline
+\end{tabular}
+\end{center}
+Nótese que \[\frac{30-10}{10-0}=\frac{86-50}{50-32}=2\] pero las
+razones son distintas, por ejemplo \[\frac{30}{10} \neq \frac{86}{50}\]
+\end{ejemplo}
+
+\subsection{Escala de Razón}
+Presenta todas las propiedades anteriores, más un punto cero
+verdadero en su origen. Estamos en una escala de razón cuando se
+pueden establecer cuatro tipos de relaciones: equivalencia, mayor
+o menor que, relación entre dos intervalos cualesquiera, y
+relación entre dos valores cualesquiera de la escala. Sólo es
+arbitraria la unidad de medida, pero no el cero.
+
+\begin{ejemplo}
+La longitud y el peso son ejemplos típicos de medidas de razón.
+\end{ejemplo}
+\section{Tipos de variables.}
+Cualquier característica que cambie (o varíe) de un individuo, unidad
+experimental o unidad de observación a otro(a) es una variable. Las variables
+pueden ser cualitativas o cuantitativas
+
+
+
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{|rrrrrrrrrrrrrrrr|}
+  \hline
+Empresa & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\
+  \hline
+tipo & 1 & 2 & 2 & 3 & 1 & 2 & 3 & 2 & 1 & 2 & 3 & 1 & 1 & 2 & 3 \\
+  clasi & 1 & 2 & 3 & 2 & 4 & 2 & 3 & 2 & 1 & 2 & 3 & 4 & 2 & 3 & 1 \\
+   \hline \hline
+Empresa &  16 &  17 &  18 &  19 &  20 &  21 &  22 &  23 &  24 &  25 &  26 &  27
+& 28 & 29 &  30 \\ \hline
+tipo & 3 & 2 & 1 & 2 & 3 & 2 & 3 & 1 & 3 & 2 & 2 & 3 & 1 & 2 & 3 \\
+clasi & 2 & 3 & 2 & 1 & 4 & 4 & 1 & 2 & 4 & 1 & 2 & 3 & 1 & 4 & 4 \\
+\hline\hline
+Empresa&  31 &  32 &  33 &  34 &  35 &  36 &  37 &  38 &  39 &  40 &  41 &  42 &
+ 43 & 44 &  45 \\
+\hline
+tipo & 1 & 2 & 3 & 1 & 3 & 2 & 1 & 3 & 2 & 3 & 1 & 2 & 3 & 1 & 2 \\
+clasi & 2 & 3 & 2 & 1 & 4 & 2 & 3 & 1 & 4 & 2 & 1 & 3 & 2 & 1 & 4 \\
+\hline\hline
+Empresa &  46 &  47 &  48 &  49 &  50 &   &   &   &   &   &   &   &   &   &  \\
+tipo & 1 & 2 & 3 & 1 &  2 &   &   &   &   &   &   &   &   &   &   \\
+clasi & 1 & 2 & 3 & 2 & 1 &   &   &   &   &   &   &   &   &   &   \\
+\hline
+\end{tabular}
+\caption{Calificación de 50 organizaciones en cuanto a su conciencia social}
+\label{tabla:datos:conciencia:social}
+\end{table}
+
+
+\subsection{Variables Cualitativas}
+Aquellas en las que no es posible hacer mediciones en escalas numéricas sino
+que sus valores corresponden a clases o categorías.  Ejemplo: Sexo, estado
+civil, el color de los ojos, tipo documento (publico o privado), el estrato de
+una familia, etc.
+
+\subsection{Variables Cuantitativas}
+Son las que se pueden hacer corresponder a valores numéricos.
+Ejemplo: Peso, longitud, temperatura, ingreso mensual, el gasto
+promedio mensual de una familia, el número de kilovatios de
+energía consumido en una fabrica, el índice  de pobreza o
+desempleo de un municipio, el número de hijos por familia.
+
+Las variables cuantitativas se clasifican en: continuas y
+discretas.
+
+\subsubsection{Continuas}
+Son las que pueden tomar cualquier valor dentro de un intervalo
+numérico, son ejemplos de variables continuas el tiempo, peso,
+longitud, temperatura, Humedad relativa entre otras.
+
+\subsubsection{Discretas}
+Son las que pueden tomar un número finito o infinito contable de
+valores.
+
+
+\section{Presentación de datos}
+
+Existen múltiples formas de representar datos. El tipo de gráfico
+a usar depende de la naturaleza (cualitativa o cuantitativa) de la
+variable medida. Para variables cualitativas los más gráficos más populares
+son el diagrama de barras y el de sectores; para datos cuantitativos se usan los
+histogramas, {\it Box Plot} , diagramas de tallos y hojas, entre otros.
+
+\subsection{Presentación de datos cualitativos}
+
+\subsubsection{Diagrama de barras}
+
+Para construir el diagrama de barras se ubican las categorías en el eje
+horizontal y sobre éstas se dibujan barras (rectángulos) de un alto
+proporcional a la frecuencia de la categoría, definida como el número de
+observaciones que pertenecen a ella. En la figura \ref{grafico:barras} se
+muestran las barras apiladas (izquierda) y las barras múltiples (derecha)
+construidas a partir de los datos del ejemplo \ref{ejemplo:conciencia:social}
+
+\begin{ejemplo}[Tomado de \citeasnoun{Webster}
+]\label{ejemplo:conciencia:social} %\cite{Montgomery} 
+En una escala de 1 a 4, siendo 4 el mejor, un grupo de consumidores clasifica la
+``conciencia social'' de 50 organizaciones clasificadas como publicas,
+indicadas con un ``1'' en los datos mostrados en la tabla
+\ref{tabla:datos:conciencia:social}, privadas; indicadas con un
+``2'', o controladas por el gobierno; indicadas con un ``3''. Una forma de
+resumir estos datos numéricamente es mediante una tabla de contingencia, la cual
+se muestra en la tabla \ref{tabla:cont:datos:conciencia:social}. La última fila
+y la última columna, identificadas en la tabla con Sum, se conocen como
+marginales de columna y de fila, respectivamente, el valor 15 en la
+marginal de fila, indica el número de organizaciones que son públicas
+en los datos. De manera análoga se observa en la marginal de columnas que 17
+organizaciones fueron clasificadas como de conciencia social 2. El valor 7 en
+la primera fila y primera columna indica que 7 organizaciones públicas fueron
+calificadas con 1 en conciencia social. 
+
+% Dos gráficos
+%de barras, construido a partir de estos datos, se muestran en la figura
+%\ref{grafico:barras}. 
+
+\suppressfloats[t]
+\begin{table}[!h]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & \multicolumn{4}{c}{Clasificación} &  \\
+Tipo & 1 & 2 & 3 & 4 & Sum \\
+  \hline
+1 & 7 & 5 & 1 & 2 & 15 \\
+  2 & 3 & 7 & 5 & 4 & 19 \\
+  3 & 3 & 5 & 4 & 4 & 16 \\
+  Sum & 13 & 17 & 10 & 10 & 50 \\
+   \hline
+\end{tabular}
+\caption{Tabla de contingencia a partir de los datos de la tabla
+\ref{tabla:datos:conciencia:social}}  
+\label{tabla:cont:datos:conciencia:social}
+\end{table}
+
+
+
+\suppressfloats[t]\begin{figure}[!ht]
+ \centering
+\includegraphics[scale=0.5]{barras.eps}
+\caption{Diagramas de barras construidos a partir de los datos de la tabla
+\ref{tabla:datos:conciencia:social} .}% Izquierda: apiladas, Derecha: múltiples
+%}
+\label{grafico:barras}
+\end{figure}
+
+
+\end{ejemplo}
+
+
+El código \texttt{R} para obtener el gráfico de barras es el siguiente:
+\begin{Verbatim}
+tipo<-c(1,2,2,3,1,2,3,2,1,2,3,1,
+        1,2,3,3,2,1,2,3,2,3,1,3,
+        2,2,3,1,2,3,1,2,3,1,3,2,
+        1,3,2,3,1,2,3,1,2,1,2,3,
+        1,2)
+# convierte en un factor y agrega nombres a los niveles
+tipo<-factor(tipo,
+labels=c("Publicas","Privadas",
+        "Controladas"))
+clasi<-c(1,2,3,2,4,2,3,2,1,2,3,4,
+         2,3,1,2,3,2,1,4,4,1,2,4,
+         1,2,3,1,4,4,2,3,2,1,4,2,
+         3,1,4,2,1,3,2,1,4,1,2,3,
+         2,1)
+clasi<-factor(clasi,
+labels=c("Clase 1","Clase 2",
+         "Clase 3","Clase 4"))
+# tabla de contingencia
+table(tipo,clasi)
+# tabla con marginales
+addmargins(table(tipo,clasi))
+# Barras Apiladas
+barplot(table(tipo,clasi))
+#Barras Multiples
+barplot(table(tipo,clasi),beside=TRUE)
+\end{Verbatim}
+
+
+
+
+
+\subsubsection{Diagrama de sectores}
+Es un gráfico que se basa en una proporcionalidad entre la
+frecuencia y el ángulo central de una circunferencia, de tal
+manera que a la frecuencia total le corresponde el ángulo central
+de 360°. Para determinar el ángulo que corresponde a cada
+categoría se aplica la siguiente fórmula
+\begin{equation*}
+ \theta_i=\frac{f_i\times360}{\sum f_i}
+\end{equation*}
+donde $f_i$ es la frecuencia de la $i-$ésima categoría.
+
+\begin{ejemplo}
+La tabla \ref{tabla:yogur} muestra los resultados de un sondeo a cerca de
+la preferencia de algunos clientes con respecto al sabor  del
+yogur. Representar los datos en un diagrama de sectores.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{|c|c|}\hline
+  Sabor &No. Personas \\\hline\hline
+  Fresa & 210 \\\hline
+  Melocotón  &80 \\\hline
+  Pasas & 120 \\ \hline
+\end{tabular}
+\caption{Preferencia de los clientes en cuanto al sabor del yogur}
+\label{tabla:yogur}
+\end{table}
+
+
+Las frecuencias son: $f_1=210$, $f_2=80$ y $f_3=120$ y $\sum
+f_i=410$. Los ángulos correspondientes son entonces:
+\begin{center}\begin{tabular}{|c|c|}\hline
+  Sabor &Ángulo en grados ($\theta_i$) \\\hline\hline
+  Fresa &$\frac{210\times360}{410}=184.39$ \\\hline
+  Melocotón  &$\frac{80\times360}{410}=70.24$ \\\hline
+  Pasas & $ \frac{120\times360}{410}=105.36$ \\ \hline
+\end{tabular}
+\end{center}
+Una vez se tienen los ángulos se procede a dividir el circulo
+según estos, como se muestra en la figura \ref{torta:yogur}. El código
+\texttt{R} para realizar este gráfico se transcribe a continuación.  
+
+\begin{Verbatim}
+yogur<-c(210,80,120)
+names(yogur)<-c("Fresa","Melocotón","Pasas")
+pie(yogur)
+\end{Verbatim}
+
+\suppressfloats[t]\begin{figure}[!ht]
+ \centering
+\includegraphics[scale=0.6]{torta.eps}
+%[height=8cm,width=8cm]
+%\psset{xunit=0.8cm,yunit=0.8cm} \psset{runit=3cm}
+%\begin{pspicture}(-6,-6)(9,4)
+%\SpecialCoor \degrees[100]
+%\pswedge[fillstyle=vlines](0,0){1}{0}{51.1}%51.1%
+%\pswedge[fillstyle=hlines](0,0){1}{51.1}{70.73}%70.24%
+%\pswedge[fillstyle=crosshatch](0,0){1}{70.73}{100}%70.24%
+%\rput(0.7;25){\footnotesize \psovalbox*{51.21\%}}
+%\rput(0.7;60){\footnotesize \psovalbox*{19.51\%}}
+%\rput(0.7;85){\footnotesize \psovalbox*{29.28\%}}
+%\rput*[l](1.1;25){\bf Fresa} \rput*[r](1.1;58){\bf Melocotón}
+%\rput*[l](1.1;87){\bf Pasas}
+%\rput*[l](2,-5){\psframebox[shadow=true]%
+%{\begin{tabular}{l} Distribución de preferencias\\
+%de los clientes según el sabor \end{tabular}}}
+%\end{pspicture}
+\caption{Diagrama de sectores}\label{torta:yogur}
+\end{figure}
+\end{ejemplo}
+\subsection[Datos Cuantitativos]{Presentación de datos cuantitativos}
+
+\subsubsection{Distribuciones de frecuencia}
+La distribución de frecuencia es una tabla que divide un conjunto
+de datos en un número de clases o categorías apropiadas, mostrando
+también el número de elementos de la case. La tabla sacrifica
+parte de la información contenida en los datos; en lugar de
+conocer el valor exacto del elemento, solo sabemos que pertenece a
+una clase determinada. Por otra parte, este tipo de agrupamiento
+hace resaltar características importantes de los datos.
+
+El procedimiento para construir una tabla de frecuencia es el
+siguiente:
+
+\begin{enumerate}
+\item Se establece cierto número de clases (intervalos)
+para agrupar los valores observados, en general el número de
+clases que usemos depende del número de observaciones, pero tiene
+muy poca utilidad usar menos de 5 o mas de 15. Para unificar
+criterios usaremos la siguiente formula empírica para determinar
+el número de clases \[ K\approx1+3.3\log(n)\] donde $K$ es el
+número de clases, $\log$ es el logaritmo en base 10 y $n$ es el
+número de datos
+\item Se obtiene el rango o amplitud $(R)$, que es la diferencia
+entre el valor mas grande y el más pequeño.
+\item Se define el ancho de clase dividiendo el rango entre el
+número de clases, $A=R/K$.
+\item El limite inferior del primer intervalo (clase) es el menor de los datos,
+el
+limite superior del primer intervalo se obtiene sumando al dato
+menor el ancho de clase. El segundo intervalo se obtiene sumando
+el ancho de clase al limite superior del primero y así
+sucesivamente.
+\item A cada clase se hace corresponder el número de observaciones
+incluidas en ellas, el cual constituye la frecuencia de clase.
+\end{enumerate}
+
+\begin{ejemplo} \label{eje_tablafrec}
+La demanda diaria, en kilogramos, de un producto industrial
+durante 30 días fue:
+\begin{center}\begin{tabular}{cccccc}\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+ 38 & 35&  76  &58 & 48 & 59\\
+ 67 & 63&  33&  69&  53&  51\\
+ 28 & 25 & 36 & 32 & 61 & 57  \\
+  49&  78 & 48 & 42 & 72 & 52\\
+ 47 & 66&  58 & 44 & 44 & 56 \\ \hline
+\end{tabular}
+\end{center}
+Construir una tabla que contenga la distribución de frecuencia
+relativa y frecuencia relativa acumulada.
+
+% 
+
+\begin{enumerate}
+\item Determinamos el número de clases mediante la formula \[
+1+3.3\log(30)=5.8745\approx6=K\]
+\item Se obtiene el rango o amplitud $R=78-25=53$
+\item Se obtiene el ancho de clase dividiendo la amplitud entre el número de
+clases
+así: $A=53/6=8.83$
+\item El limite inferior de la primera clase es el menor de los datos (25), para
+obtener el limite superior de la primera clase, al dato menor se le suma
+el ancho de clase: $25+8.83=33.83$ de esa forma la primera clase
+es $[25 - 33.83)$. El limite inferior de la segunda clase es el
+superior de la primera y el superior es: $33.83+8.83=42.66$ así
+que la segunda clase es $[33.83 - 42.66)$ con ese procedimiento se
+continua hasta agotar las seis clases. Se debe tener en cuenta que
+el limite superior de la última clase es el mayor de los datos.
+\item Una vez se tienen todas las clases se cuenta el número de
+datos que pertenecen a cada intervalo. La tabla se muestra a
+continuación
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Li& Ls & Frec & Frec Acum& Frec Rel & Frec Rel Acum \\\hline\hline
+25& 33,83&  4&  4&  0,133& 0,13\\\hline
+ 33,83&  42,66&  4& 8&0,133& 0,27 \\\hline
+ 42,66& 51,49&  7&  15&0,233& 0,50 \\\hline
+ 51,49& 60,32&  7&  22& 0,233& 0,73 \\ \hline
+  60,32& 69,15&  5&  27& 0,166& 0,90 \\ \hline
+  69,15& 78.00& 3& 30& 0,100& 1,00 \\\hline
+\end{tabular}
+\end{center}
+\end{enumerate}
+\subsubsection{Representación Gráfica}
+La forma más común de representar una distribución de frecuencias
+es el histograma. Para construir el histograma de una distribución
+de frecuencia se colocan los intervalos de clase en el eje
+horizontal de un plano cartesiano y sobre estos se dibujan
+rectángulos cuyas alturas son las frecuencias de clase.
+
+\begin{Verbatim}
+demanda<-c(38 , 35,  76  ,58 , 48 , 59,
+67 , 63,  33,  69,  53,  51,
+28 , 25 , 36 , 32 , 61 , 57  ,
+49,  78 , 48 , 42 , 72 , 52,
+47 , 66,  58 , 44 , 44 , 56)
+# histograma con las opciones por defecto 
+hist(demanda)
+# histograma del ejemplo
+hist(demanda,breaks=seq(25,78,by=(78-25)/6)
+,right = FALSE)
+\end{Verbatim}
+Obtener la tabla de frecuencia, la ojiva y el polígono de frecuencia, se hace
+mas fácil en \texttt{R} con la libraría \verb'agricolae', la cual
+debe instalarse previamente. 
+\begin{Verbatim}
+# se carga la libraría
+library(agricolae)
+#tabla de frecuencias
+table.freq(histo)
+#polígono de frecuencias
+polygon.freq(histo)
+#Ojiva
+ojiva.freq(histo,type="l",col="red",frame=F)
+\end{Verbatim}
+
+\suppressfloats[t]\begin{figure}[!ht]
+ \centering
+\includegraphics[scale=0.6]{HistoDemanda.eps}
+\caption{Histograma de frecuencias}
+\end{figure}
+
+\subsubsection{Diagramas de tallos y hojas.}
+Es una forma rápida de obtener una representación visual
+ilustrativa del conjunto de datos. Para construir un diagrama de
+tallo y hoja primero se debe seleccionar uno ó más dígitos
+iniciales para los valores de tallo, el dígito o dígitos finales
+se convierten en hojas, luego se hace una lista de valores de
+tallo en una columna vertical. Prosiguiendo a registrar la hoja
+por cada observación junto al valor correspondiente de tallo. Este
+se usa para listas grandes y es un método resumido de mostrar los
+datos, posee la desventaja que no proporciona sino los datos, y no
+aparece por ningún lado información sobre frecuencias y demás
+datos importantes. El diagrama de tallos y hojas para los datos de
+nuestro ejemplo se muestra a continuación.
+
+\suppressfloats[t] \begin{figure}[!ht]
+  \centering
+  %\begin{pspicture}(6,6)
+%\rput*[l](1,3){\parbox{6cm}%
+  {\begin{tabular}{c|ccccccccc}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  2 &5 &8&  & & & & & & \\
+  3 &2 &3&5 &6&8& & & & \\
+  4 &2 &4&4 &7&8&8&9& & \\
+  5 &1 &2&3 &6&7&8&8&9&  \\
+  6 &1 &3&6 &7&9& & & &  \\
+  7 &2 &6&8 & & & & & &  \\
+\end{tabular} } %}
+%\end{pspicture}
+  \caption{Diagrama de tallos y hojas}\label{grafico:tallos:hojas}
+\end{figure}
+\end{ejemplo}
+
+El diagrama de tallos y hojas se puede obtener, con \texttt{R} mediante el
+siguiente código:
+\begin{Verbatim}
+stem(demanda)
+\end{Verbatim}
+
+
+
+
+
+\section{Medidas descriptivas.}
+\subsection[Tendencia central]{Medidas de tendencia central}
+
+\subsubsection{Media aritmética.}
+
+La media aritmética de un conjunto de $n$ observaciones
+$y_{1},y_{2},y_{3}\cdots y_{n}$ es igual a la suma de las
+observaciones dividida entre $n$ (el número de datos). Se indica
+con $\overline{y}$
+\begin{equation}\label{mediamuestral}
+ \overline{y}  =\frac{\sum\limits_{i=1}^{n}y_{i}}{n}=\frac{y_{1}+y_{2}%
++y_{3}+\cdots+y_{n}}{n}
+\end{equation}
+\begin{ejemplo}
+Considere las siguientes 15 mediciones%
+\begin{center}
+\begin{tabular}
+[c]{ccccc}%
+8 & 10 & 4 & 3 & 8\\
+5 & 6 & 8 & 7 & 6\\
+7 & 7 & 5 & 11 & 7
+\end{tabular}
+\end{center}
+Calcular la media
+
+ 
+\[
+\overline{y}=\frac{8+5+7+\cdots+8+6+7}{15}=\frac{102}{15}=6.8
+\]
+\end{ejemplo}
+
+Para calcular la media con \texttt{R} se usa el código:
+\begin{Verbatim}
+datos<-c(8,10,4,3,8,
+5,6,8,7,6,7,7,5,11,7)
+mean(datos)
+\end{Verbatim}
+
+
+
+\subsubsection{Media ponderada.}
+Útil cuando se deben promediar diferentes medias que provienen de
+muestras con diferente número de observaciones, donde es
+conveniente usar ponderaciones que dependen del número de
+observaciones, se calcula con la siguiente fórmula:
+\begin{equation}\label{mediaponderada}
+  \overline{y}_{w}=\frac{\sum w_{i}\overline{y}_{i}}{\sum w_{i}}
+\end{equation}
+
+\begin{ejemplo}
+Promediar las siguientes medias $\overline{y}_{1}=45,$
+$\overline{y}_{2}=32,$ $\overline{y}_{3}=60,$ provenientes de
+muestras de tamaño 25, 12 y 21 respectivamente.
+
+  $\sum\limits_{i=1}^{3}w_{i}=58,$
+\[
+\overline{y}_{w}=\frac{25\times45+32\times12+21\times60}{58}=\frac{2769}%
+{58}=47.74
+\]
+\end{ejemplo}
+
+\subsubsection{Mediana}\label{sec:mediana}
+Como se definió en la sección \ref{cajabigote}, la mediana de un
+conjunto de valores $y_{1}$, $y_{2}$, $y_{3}$, $\cdots$, $y_{n}$
+es el valor que se ubica en el centro cuando las observaciones
+están colocadas en orden de magnitud. Cuando el número es
+par la mediana se obtiene promediando los dos valores centrales.
+
+\begin{ejemplo}
+Obtener la mediana de los siguientes valores 8, 3, 2, 4, 5, 6, 9.
+
+  Ordenando se obtiene 2, 3, 4, 5, 6, 8, 9. La mediana es 5.
+
+\end{ejemplo}
+
+\begin{ejemplo}
+Obtener la mediana de los siguientes valores 9, 2, 7, 11, 14, 6.
+
+   Ordenando se obtiene 2, 6, 7, 9, 11, 14. Como el número de
+observaciones es par y las dos observaciones centrales son 7 y 9,
+la mediana es $\frac{7+9}{2}=\frac{16}{2}=8.$
+\end{ejemplo}
+
+El código es el siguiente
+
+\begin{Verbatim}
+datosm<-c(8, 3, 2, 4, 5, 6, 9)
+median(datosm) 
+\end{Verbatim}
+
+
+
+
+\subsubsection{Percentiles y cuartiles}
+
+La mediana divide a los datos en dos partes iguales. También es posible dividir
+los datos en mas de dos partes. Los cuartiles dividen el conjunto de datos
+ordenados en cuatro partes iguales. El {\it primer cuartil}  o cuartil
+inferior, notado como $Q_1$, es un valor tal que el 25\% de los datos es menor
+o igual que él y el restante 75\% es mayor igual que él. El segundo cuartil,
+$Q_2$, tiene la mitad (50\%) de los datos por debajo de él, $Q_2$ es
+exactamente igual a la mediana, de manera análoga el tercer cuartil es un
+valor que tiene el 75\% de los datos por debajo y el 25\% por encima. Cuando un
+conjunto de datos se divide en cien partes iguales, los puntos de división
+reciben el nombre de percentiles. En general:
+
+\begin{definicion}
+el $100k-$ésimo percentil
+$0<k<1$, denotado por $p_k$, es un valor tal que al menos el $100k\%$ de las
+observaciones son menores o iguales que él y al menos el $100(1-k)\%$ son
+mayores o iguales que él.
+\end{definicion}
+
+Nótese que $Q_1=p_{0.25}$, $Me=p_{0.5}$ y $Q_3=p_{0.75}$. Para calcular el
+percentil  $100k\%$ se procede de la siguiente forma.
+
+\begin{enumerate}
+ \item Ordene los datos de menor a mayor.
+ \item Calcule $nk$, donde $n$ es el número de datos
+  \begin{enumerate}
+   \item Si $nk$ no es entero aproxímelo al entero siguiente y esa es la
+posición del percentil  $100k\%$.
+\item Si $nk$ es entero, el percentil $100k\%$ se obtiene promediando las
+observaciones que ocupan los lugares $nk$ y $nk+1$.
+  \end{enumerate}
+
+\end{enumerate}
+\begin{ejemplo} Considere los datos del ejemplo \ref{eje_tablafrec}, calcule:
+\begin{enumerate}[a)]
+\item Los cuartiles.
+\item El percentil 15.
+\item El percentil 80.
+\end{enumerate}
+%\begin{solucion}
+Los datos se encuentran ordenados en el diagrama de tallos y hojas mostrado en
+la figura \ref{grafico:tallos:hojas}. Para este ejemplo tenemos que $n=30$
+\begin{itemize}
+ \item Usaremos el algoritmo descrito anteriormente para obtener los
+valores pedidos. 
+ \begin{itemize}
+ \item  El primer cuartil es el percentil 25, por tanto $k=0.25$ y $nk=7.5$ que
+no es entero, por tanto, de acuerdo con el algoritmo dado anteriormente lo
+aproximamos al entero siguiente que es 8, luego $p_{0.25}=Q_1=42$ ya que esta
+es la observación que ocupa el lugar 8 en los datos ordenados. este valor
+significa que el 25\% de los pedidos de ese mes estuvieron por debajo o fueron
+iguales a 42 kilos.
+
+\item El segundo cuartil es el percentil 50 o la mediana de los datos, en este
+caso $k=0.5$ y $nk=15$, que es un entero, por tanto el percentil 50 o mediana
+es el promedio de las observaciones que ocupan los lugares 15 y 16 es decir
+$\frac{51+52}{2}=51.5$ ¿qué indica este valor?
+\item  El tercer cuartil es el percentil 75, por tanto $k=0.75$ y
+$nk=22.5$ que no es entero, por tanto, de acuerdo con el algoritmo expuesto
+anteriormente lo aproximamos al entero siguiente que es 23, luego
+$p_{0.75}=Q_3=61$ ya que esta es la observación que ocupa el lugar 23 en los
+datos ordenados. Este valor del tercer cuartil nos indica que el 75\% de los
+pedidos de ese mes fueron menores o iguales que 61 kilos.
+\end{itemize}
+
+\item Para calcular el percentil 15 se tiene $nk=30\times 0.15=4.5$ que no es
+entero y por tanto, $p_{0.15}=35$ que es la observación que ocupa el lugar 5 en
+los datos ordenados.
+
+\item Para calcular el percentil 80 se tiene $nk=30\times 0.8=24$ que es
+entero y por tanto, $p_{0.8}=\frac{63+66}{2}=64.5$ ya que 63 y 66 son las
+observaciones que ocupan los lugares 24 y 25 en los datos ordenados. ¿cómo se
+interpreta este valor?
+\end{itemize}
+
+
+El código en \texttt{R} para calcular los cuartiles y percentiles, se muestra a
+continuación
+\begin{Verbatim}
+demanda<-c(38 , 35,  76  ,58 , 48 , 59,
+67 , 63,  33,  69,  53,  51,
+28 , 25 , 36 , 32 , 61 , 57  ,
+49,  78 , 48 , 42 , 72 , 52,
+47 , 66,  58 , 44 , 44 , 56)
+
+quantile(demanda,type=2)
+# percentiles 15 y 80
+quantile(demanda,probs=c(0.15,0.80),type=2)
+\end{Verbatim}
+
+
+
+
+
+
+
+
+
+
+\end{ejemplo}
+
+
+
+\subsubsection{Moda.}
+
+Es el valor (si existe) que ocurre con mayor frecuencia. Si es un
+valor único se dice que la distribución es unimodal, si en los datos se tienen
+tienen dos o mas valores con la misma frecuencia máxima, se
+dice que la distribución es bimodal, trimodal, etc.
+
+\begin{ejemplo}
+Los tamaños de las camadas de una estación porcícola
+fueron los siguientes: 4, 5, 6, 8, 10, 9, 8, 8. Hallar la moda.
+
+  8 es la moda porque es el valor que se repite con mayor
+frecuencia. $M_{o}=8. $
+\end{ejemplo}
+La moda puede no existir cuando los valores se presentan todos con
+la misma frecuencia. \textbf{\emph{En una tabla de frecuencias
+resulta útil para propósitos descriptivos, indicar la
+clase modal, que es la clase con mayor frecuencia. Para calcular
+la moda se usa el punto medio de la clase modal}}.
+
+\subsection{Medidas de dispersion.}
+Las medidas de dispersión indican el grado de variabilidad entre
+las observaciones, las mas comunes son la varianza, el 
+rango o amplitud, la desviación estándar y el coeficiente de
+variación.
+
+\subsubsection{Rango.}
+
+Se obtiene como la diferencia entre el mayor y el menor de los
+valores del conjunto de observaciones, esta medida de dispersión tiene la
+desventaja de dejarse influenciar por valores extremos. Resulta útil cuando
+no se conoce la varianza de distribuciones normales, para estimar
+de manera aproximada la desviación estándar.
+
+\begin{ejemplo}
+En el punto 2 del ejemplo \ref{eje_tablafrec} (página
+\pageref{eje_tablafrec}) se calculó el rango de los datos
+correspondientes a la demanda diaria de un producto industrial.
+\end{ejemplo}
+
+\subsubsection{Varianza.}
+La varianza ($S^{2}$), de un conjunto de observaciones se define
+como la suma de cuadrados de las desviaciones de las observaciones
+respecto a su media, dividida por el número de observaciones
+menos uno.
+\begin{equation}\label{varianza}
+S^{2} =\frac{\sum\limits_{i=1}^{n}\left(  y_{i}-\overline{y}\right)  ^{2}%
+}{n-1}
+\end{equation}
+una fórmula alternativa para calcular la varianza es%
+\begin{equation}\label{varianza_alt}
+S^{2}=\frac{\sum\limits_{i=1}^{n}y_{i}^{2}-n\overline{y}^{2}}{n-1}
+\end{equation}
+
+\subsubsection{Desviación estándar.}
+
+Se define como la raíz cuadrada de la varianza
+\begin{equation}
+S =\sqrt{S^{2}}
+\end{equation}
+
+\begin{ejemplo}\label{eje_varianza}
+Calcular la varianza y la desviación estándar del
+siguiente conjunto de datos.
+\begin{center}
+\begin{tabular}
+[c]{ccccc}%
+4 & 7 & 3 & 6 & 5
+\end{tabular}
+\end{center}
+
+  Para estos datos tenemos que $n=5$ y $\overline{y}=5$.
+\begin{description}
+  \item[Varianza] \begin{align*}
+s^{2}  & =\frac{(4-5)^{2}+(7-5)^{2}+(3-5)^{2}+(6-5)^{2}+(5-5)^{2}}{4}\\
+&
+=\frac{(-1)^{2}+2^{2}+(-2)^{2}+1^{2}+0^{2}}{4}=\frac{1+4+4+1+0}{4}=\frac
+{10}{4}=2.5
+\end{align*}
+  \item[Desviación Estándar] \[
+S=\sqrt{2.5}=1.58114
+\]
+\end{description}
+Una forma práctica para calcular la varianza es por medio de una
+tabla como la siguiente
+
+\begin{center}\begin{tabular}{|c|c|r|c|}\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $i$&$y_i$&$y_i-\overline{y}$ &$(y_i-\overline{y})^2$ \\\hline\hline
+  1 &4 &$-1$ &1 \\
+  2 &7 & 2 & 4 \\
+  3 &3 & $-2$ &4 \\
+  4 &6 & $1$ &1 \\
+  5 &5 & 0 & 0 \\\hline \hline
+  Sumas&25&0&10 \\ \hline
+\end{tabular}
+\end{center}
+\end{ejemplo}
+
+\begin{ejemplo}
+Se ilustrará el uso de la formula alternativa \eqref{varianza_alt}
+para calcular la varianza, usaremos los datos del ejemplo
+\ref{eje_varianza}.
+
+  En este caso $n\overline{y}^2=5\times 5^2=5\times25=125$,
+calculamos los cuadrados de cada uno de los datos y sumamos, como
+se muestra en la siguiente tabla:
+\begin{center}\begin{tabular}{|c|c|r|}\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  $i$&$y_i$&$y_i^2$ \\\hline\hline
+  1 &4 &16 \\
+  2 &7 &49 \\
+  3 &3 &9 \\
+  4 &6 &36 \\
+  5 &5 &25 \\\hline \hline
+  Sumas&25&135\\ \hline
+  \end{tabular}
+\end{center}
+se tiene que $\sum \limits_{i=1}^5 y_i^2=135$ por lo tanto
+\[S^2=\frac{135-125}{4}=\frac{10}{4}=2.5\] que como se esperaba
+coincide con el resultado del ejemplo \ref{eje_varianza}.
+\end{ejemplo}
+
+\subsubsection{Coeficiente de variación}
+
+El coeficiente de variación $(CV)$ de un conjunto de datos se
+define como el cociente entre la desviación estándar y la
+media.
+\begin{equation}\label{CV}
+CV=\frac{S}{\overline{y}}
+\end{equation}
+El coeficiente de variación es una medida de la dispersión
+relativa de un conjunto de datos. Con frecuencia esta relación
+se indica en porcentajes. Resulta de gran utilidad para comparar
+la variabilidad de diferentes conjuntos de datos.
+\begin{ejemplo}
+El coeficiente de variación de los datos del ejemplo
+\ref{eje_varianza} es
+\[CV=\frac{S}{\overline{y}}=\frac{1.58114}{5}=0.3162\equiv 31.62\% \]
+\end{ejemplo}
+
+
+Con el siguiente código de \texttt{R} se calcula las medidas de dispersión
+vistas hasta ahora.
+
+\begin{Verbatim}
+datosv<-c(4,7,3,6,5)
+# varianza
+var(datosv)
+#desviación
+sd(datosv)
+#desviación, otra forma
+sqrt(var(datosv))
+#coeficiente de variación
+sd(datosv)/mean(datosv)
+\end{Verbatim}
+
+
+
+
+\subsubsection{Diagrama de caja y bigotes.}\label{cajabigote}
+
+
+
+Este tipo de gráfico también llamado {\it box and whisker plot}, o simplemente
+{\it box plot}, facilita la lectura sobre localización, variabilidad, simetría y
+presencia de datos atípicos (\emph{outliers} según la literatura
+estadística inglesa). El  {\it box plot} consiste en una caja y
+guiones con una linea a través de la caja que representa la
+mediana (segundo cuartil $Q_2$). El extremo inferior de la caja es
+el primer cuartil $Q_1$ y el superior es el tercer cuartil $Q_3$.
+
+El bigote superior se extiende desde el tercer cuartil hasta la
+\textbf{observación más grande que es menor o igual que
+$Q_3+1.5\times(Q_3-Q_1)$}.  El bigote inferior se
+extiende hasta la \textbf{observación más pequeña que es mayor o
+igual que} $Q_1-1.5\times(Q_3-Q_1)$. Las observaciones que estén por fuera de
+estos límites se clasifican como datos atípicos y se ubican en el
+diagrama. Para construir el diagrama de caja siga los siguientes pasos:
+
+\begin{enumerate}[a.]
+\item Dibujar y marcar un eje de medida vertical (eje de coordenadas).
+\item Construir un rectángulo cuyo borde inferior se ubica en el
+cuartil  inferior $(Q_1)$ y cuyo borde superior se ubica en el
+cuartil superior $(Q_3)$.
+\item Dibujar un segmento de recta horizontal dentro de la caja justo en el
+segundo cuartil (mediana).
+\item Prolongar una recta (el bigote) desde el extremo superior de la caja hasta
+la observación más grande que es menor o igual que
+$Q_3+1.5\times(Q_3-Q_1)$.
+\item Prolongar una recta (el otro bigote) desde el extremo inferior de la caja
+hasta la observación más pequeña que es mayor o igual que
+$Q_1-1.5\times(Q_3-Q_1)$
+\item Dibujar un \textborn{} para ubicar (e identificar) cada observación
+que quede fuera del alcance de los bigotes.
+\end{enumerate}
+
+
+
+\begin{ejemplo}\label{ejemplocuartiles}
+Los datos que se muestran en la siguiente tabla corresponden a el
+peso (en kilogramos) de 25 niños al momento de nacer
+\begin{center}
+\begin{tabular}{ccccc} \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  2.536&2.505&2.652&2.573&2.382\\
+ 2.443&2.617&2.556&2.489&2.415 \\
+ 2.434&2.491& 2.345& 2.350& 2.536 \\
+ 2.577&2.464&2.571& 2.550& 2.437\\
+ 2.472&2.580&2.436& 2.200& 2.851\\ \hline
+\end{tabular}
+\end{center}
+Representar estos datos mediante un diagrama de caja.
+
+Lo primero que hay que hacer es ordenar los datos de menor a
+mayor, con el fin de obtener los cuartiles. Los datos ordenados se
+muestran en la tabla \ref{datos_ejemplocuartiles}.
+
+
+\suppressfloats[t]\begin{table}[!hb]
+  \centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1&2& 3& 4& 5& 6& 7& 8& 9& 10 \\\hline
+  2.200& 2.345& 2.350& 2.382& 2.415&\fbox{2.434}& \fbox{2.436} &2.437& 2.443&
+2.464\\
+  \hline\hline
+  11&12& 13& 14& 15& 16& 17& 18 &19 &20 \\ \hline
+  2.472 & 2.489&\fbox{2.491}& 2.505& 2.536& 2.536& 2.550& 2.556&\fbox{2.571}&
+  \fbox{2.573}\\ \hline\hline
+21& 22& 23& 24& 25 & & & & &  \\\hline 2.577& 2.580& 2.617& 2.652&
+2.851 & & & & & \\ \hline
+\end{tabular}
+\caption{Datos del ejemplo \ref{ejemplocuartiles} ordenados}
+\label{datos_ejemplocuartiles}
+\end{table}
+
+
+\begin{description}
+  \item[Cuartiles] El cuartil inferior es $Q_1=2.436$; el segundo cuartil (la
+mediana) es $Q_2=2.491$ y el tercer cuartil es: $Q_3=2.571$ (verificarlo).
+
+\item[Los bigotes] El bigote superior extenderse hasta la observación
+más grande que sea menor o igual que
+\[Q_3+1.5\times(Q_3-Q_1)=2.571+1.5\times(2.571-2.436)=2,7735\] es
+decir hasta la observación número 24 (2.652). La última 25 queda por encima
+de este límite, por eso debe marcarse en el diagrama con una
+\textborn{}.
+
+El bigote inferior debe extenderse desde la parte inferior de la caja hasta la
+observación más pequeña que sea mayor o igual a
+\[Q_1-1.5\times(Q_3-Q_1)=2.436-1.5\times(2.571-2.436)=2,2335\] es
+decir hasta la segunda  observación. La primera observación queda por debajo
+de este límite, por eso debe marcarse en el diagrama con una \textborn{}.
+El boxplot se muestra en la figura \ref{boxplot}
+\end{description}
+
+A continuación se muestra el código en \texttt{R} para obtener el diagrama de
+caja y bigotes. 
+\begin{Verbatim}
+pesokg<-c(2.536,2.505,2.652,2.573,2.382,
+ 2.443,2.617,2.556,2.489,2.415 ,
+ 2.434,2.491, 2.345, 2.350, 2.536 ,
+ 2.577,2.464,2.571, 2.550, 2.437,
+ 2.472,2.580,2.436, 2.200, 2.851)
+
+boxplot(pesokg)
+\end{Verbatim}
+
+
+%\suppressfloats[t]\begin{figure}[!ht] \centering
+%    \psset{xunit=1,yunit=0.8}
+%       \begin{pspicture}(0,2)(4,11)
+%        \psline{<->}(0,2.2)(0,10.5)
+%
+%        \uput{1pt}[l](0,3){--}
+%        \uput{1pt}[l](0,4){--}
+%        \uput{1pt}[l](0,5){--}
+%        \uput{1pt}[l](0,6){--}
+%        \uput{1pt}[l](0,7){--}
+%        \uput{1pt}[l](0,8){--}
+%        \uput{1pt}[l](0,9){--}
+%        \uput{1pt}[l](0,10){--}
+%        \uput{7pt}[l](0,3){2.2}
+%        \uput{7pt}[l](0,4){2.3}
+%        \uput{7pt}[l](0,5){2.4}
+%        \uput{7pt}[l](0,6){2.5}
+%        \uput{7pt}[l](0,7){2.6}
+%        \uput{7pt}[l](0,8){2.7}
+%        \uput{7pt}[l](0,9){2.8}
+%        \uput{7pt}[l](0,10){2.9}
+%        \psline(1,6.72)(3,6.72)
+%        \psline(1,5.9)(3,5.9)
+%        \psline(1,5.35)(3,5.35)
+%        \psline (1,5.35)(1,6.72)(3,6.72)(3,5.35)
+%        \psline{*-|}(2,5.35)(2,4.45)
+%        \psline{*-|}(2,6.72)(2,7.52)
+%        \rput(2,9.51){\textborn{}}
+%        \rput(2,3){\textborn{}}
+%       \end{pspicture}
+%        \caption{Diagrama de caja y bigotes (boxplot) del ejemplo
+%\ref{ejemplocuartiles} }\label{boxplot}
+%       \end{figure}
+\end{ejemplo}
+
+
+
+
+
+
+
+\section{Ejercicios}
+\begin{enumerate}
+\item La siguiente tabla muestra el número de artículos rechazados por control
+de calidad discriminados según las causas de rechazo:
+\begin{center}
+\begin{tabular}{|l|c|} \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Causa de rechazo & Número de artículos \\\hline\hline
+  Falla eléctrica & 210 \\
+ Falla mecánica& 110 \\
+Mal acabado  & 80 \\ \hline
+\end{tabular}
+\end{center}
+Representar los datos en un diagrama de sectores y en un diagrama
+de barras.
+\item Para el siguiente conjunto de datos \begin{center}
+\begin{tabular}{cccccccc}
+10.0& 9.1&9.9&8.7 &10.5&9.8&11.4&9.4\\
+10.1&10.3&9.5&10.8&10.1&9.9&9.7&11.2
+\end{tabular}
+\end{center}
+\begin{enumerate}[(a)]
+\item Agrupe los datos en una tabla de frecuencias (Use 5 clases)
+\item represente los datos por medio de un histograma de
+frecuencias.
+\item Calcule la media, moda, mediana de los datos.
+\item Calcule la varianza, desviación estándar, el rango y $CV$
+\end{enumerate}
+\item Para decidir acerca del número de mostradores de servicio
+que serán necesarios en las tiendas que se construirán en el
+futuro, una cadena de supermercados quería obtener información
+sobre el tiempo (en minutos) requerido para atender a los
+clientes. Para obtener información acerca de la distribución de
+los tiempos de atención de los clientes,  se obtuvo una muestra de
+60 clientes y se registró el tiempo empleado en atender a cada uno
+de ellos, los datos se muestran a continuación.
+\begin{center}\begin{tabular}{cccccccccc}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+3.6& 1.0& 0.3& 0.8& 0.4& 0.6& 0.4 &0.8& 1.1& 1.8 \\
+1.9& 1.4& 1.1& 1.7 &2.3& 2.8& 1.3 &1.0& 2.2& 0.3 \\
+2.1& 1.8& 0.5& 1.4& 1.8& 2.5& 0.8& 0.9& 1.6& 1.1 \\
+0.3& 1.6& 1.2& 0.2& 4.5& 1.1& 1.3& 0.7& 1.9& 0.6 \\
+0.8& 1.1& 0.6& 1.3& 0.9& 0.4& 1.1& 3.1& 5.2& 0.7\\
+0.2& 1.8& 1.1& 3.1& 0.7& 1.2& 1.2& 1.7& 0.5& 0.6
+\end{tabular}
+\end{center}
+\begin{enumerate}[(a)]
+\item Construya una tabla de frecuencias relativas de los datos.
+\item Construya un histograma de frecuencias relativas de los
+datos.
+\item Construya un diagrama de tallos y hojas.
+\item Construya un diagrama de caja (BoxPlot)
+\item Calcule la media, la mediana, la moda (si existe)
+\item Calcule el rango, la varianza, la desviación estándar y el
+coeficiente de variación de los datos.
+\end{enumerate}
+\item Los siguientes datos son los números de torsiones requeridas
+para 12 barras de cierta aleación:
+\begin{center}
+\begin{tabular}{cccccc}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  33&24 & 39 &48 & 26 &35 \\
+  38 & 54 &23 & 34 & 29 & 37 \\
+\end{tabular}
+\end{center}
+\begin{enumerate}[(a)]
+\item Calcular la media, la mediana y la moda.
+\item calcular la varianza, la desviación estándar, el rango, y el
+$CV$
+\end{enumerate}
+\item Los siguientes datos son el número de minutos que en 15 días
+laborales una persona tiene que esperar el autobús que la llevará
+a su trabajo
+\begin{center}
+\begin{tabular}{ccccccccccccccc}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  10& 1 &13 &9 & 5 & 9 & 2 & 10& 3 & 8 & 6 & 17& 2 & 10& 15\\
+\end{tabular}
+\end{center}
+\begin{enumerate}[(a)]
+\item Calcular la media, la mediana y la moda.
+\item calcular la varianza, la desviación estándar, el rango, y el
+$CV$
+\end{enumerate}
+
+\item Los siguientes datos son 12 lecturas de temperatura en
+varios puntos de un gran horno (en grados Fahrenheit):
+\begin{center}
+\begin{tabular}{cccccccccccc}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  475&500 &460 &425 &460 &410 &470 &475&460 &510 &450 &415\\
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Calcular la media, la mediana y la moda.
+\item calcular la varianza, la desviación estándar, el rango, y el
+$CV$
+\end{enumerate}
+
+\end{enumerate}
+
